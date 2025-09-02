@@ -46,15 +46,13 @@ function Footer() {
                 <link rel="alternate" type="application/rss+xml" title={siteName} href="/sub/rss.xml" />
                 <link rel="alternate" type="application/atom+xml" title={siteName} href="/sub/atom.xml" />
                 <link rel="alternate" type="application/json" title={siteName} href="/sub/rss.json" />
-                {/* 微软网站统计代码（已修复语法错误） */}
+                {/* 微软网站统计代码 */}
                 <script type="text/javascript">
-                    {`
-                        (function(c,l,a,r,i,t,y){
-                            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                        })(window, document, "clarity", "script", "t4htrwnwuk");
-                    `}
+                    (function(c,l,a,r,i,t,y){
+                        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                    })(window, document, "clarity", "script", "t4htrwnwuk");
                 </script>
             </Helmet>
             <div className="flex flex-col mb-8 space-y-2 justify-center items-center t-primary ani-show">
@@ -108,11 +106,11 @@ function Footer() {
                     <ThemeButton mode='dark' current={modeState} label="Toggle dark mode" icon="ri-moon-line" onClick={setMode} />
                 </div>
             </div>
-            {/* 5.1la网站挂件（修复crossorigin属性命名） */}
+            {/* 5.1la网站挂件（修复charset属性命名） */}
             <script 
                 id="LA-DATA-WIDGET" 
-                crossOrigin="anonymous"  // 这里将crossorigin改为crossOrigin（驼峰式命名）
-                charset="UTF-8" 
+                crossOrigin="anonymous" 
+                charSet="UTF-8"  // 这里将charset改为charSet（驼峰式命名）
                 src="https://v6-widget.51.la/v6/3MOp3pz44aY9Pq6y/quote.js?theme=0&f=12&display=0,0,1,1,0,0,0,0"
             />
             
