@@ -46,13 +46,15 @@ function Footer() {
                 <link rel="alternate" type="application/rss+xml" title={siteName} href="/sub/rss.xml" />
                 <link rel="alternate" type="application/atom+xml" title={siteName} href="/sub/atom.xml" />
                 <link rel="alternate" type="application/json" title={siteName} href="/sub/rss.json" />
-                {/* 微软网站统计代码 */}
+                {/* 微软网站统计代码（已修复语法错误） */}
                 <script type="text/javascript">
-                    (function(c,l,a,r,i,t,y){
-                        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                    })(window, document, "clarity", "script", "t4htrwnwuk");
+                    {`
+                        (function(c,l,a,r,i,t,y){
+                            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                        })(window, document, "clarity", "script", "t4htrwnwuk");
+                    `}
                 </script>
             </Helmet>
             <div className="flex flex-col mb-8 space-y-2 justify-center items-center t-primary ani-show">
