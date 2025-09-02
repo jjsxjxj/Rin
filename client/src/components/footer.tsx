@@ -47,14 +47,17 @@ function Footer() {
                 <link rel="alternate" type="application/json" title={siteName} href="/sub/rss.json" />
                 {/* 必应SEO验证代码 */}
                 <meta name="msvalidate.01" content="FC7BFAB0FDEB9AC40AFA51E7B1BA491B" />
-                {/* 微软Clarity统计代码 - 修复了语法错误 */}
-                <script type="text/javascript">
-                    (function(c,l,a,r,i,t,y){
-                        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                    })(window, document, "clarity", "script", "t4htrwnwuk");
-                </script>
+                {/* 微软Clarity统计代码 - 使用dangerouslySetInnerHTML避免JSX语法冲突 */}
+                <script 
+                    type="text/javascript"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(c,l,a,r,i,t,y){
+                            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                        })(window, document, "clarity", "script", "t4htrwnwuk");`
+                    }}
+                />
                 {/* 51.la网站统计挂件代码 */}
                 <script 
                     id="LA-DATA-WIDGET" 
@@ -134,3 +137,4 @@ function ThemeButton({ current, mode, label, icon, onClick }: { current: ThemeMo
 }
 
 export default Footer;
+    
