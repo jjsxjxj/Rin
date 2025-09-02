@@ -108,10 +108,10 @@ function Footer() {
                     <ThemeButton mode='dark' current={modeState} label="Toggle dark mode" icon="ri-moon-line" onClick={setMode} />
                 </div>
             </div>
-            {/* 5.1la网站挂件 */}
+            {/* 5.1la网站挂件（修复crossorigin属性命名） */}
             <script 
                 id="LA-DATA-WIDGET" 
-                crossorigin="anonymous" 
+                crossOrigin="anonymous"  // 这里将crossorigin改为crossOrigin（驼峰式命名）
                 charset="UTF-8" 
                 src="https://v6-widget.51.la/v6/3MOp3pz44aY9Pq6y/quote.js?theme=0&f=12&display=0,0,1,1,0,0,0,0"
             />
