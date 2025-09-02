@@ -47,13 +47,13 @@ function Footer() {
                 <link rel="alternate" type="application/json" title={siteName} href="/sub/rss.json" />
                 {/* 必应SEO验证代码 */}
                 <meta name="msvalidate.01" content="FC7BFAB0FDEB9AC40AFA51E7B1BA491B" />
-                {/* 微软Clarity统计代码 */}
+                {/* 微软Clarity统计代码 - 修复了语法错误 */}
                 <script type="text/javascript">
-                    {(function(c,l,a,r,i,t,y){
+                    (function(c,l,a,r,i,t,y){
                         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                    })(window, document, "clarity", "script", "t4htrwnwuk");}
+                    })(window, document, "clarity", "script", "t4htrwnwuk");
                 </script>
                 {/* 51.la网站统计挂件代码 */}
                 <script 
