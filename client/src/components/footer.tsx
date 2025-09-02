@@ -58,10 +58,10 @@ function Footer() {
                         })(window, document, "clarity", "script", "t4htrwnwuk");`
                     }}
                 />
-                {/* 51.la网站统计挂件代码 */}
+                {/* 51.la网站统计挂件代码 - 修复了crossorigin属性的命名 */}
                 <script 
                     id="LA-DATA-WIDGET" 
-                    crossorigin="anonymous" 
+                    crossOrigin="anonymous"  // 这里将crossorigin改为了crossOrigin（驼峰式命名）
                     charset="UTF-8" 
                     src="https://v6-widget.51.la/v6/3MOp3pz44aY9Pq6y/quote.js?theme=0&f=12&display=0,0,1,1,0,0,0,0"
                 />
